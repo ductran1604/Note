@@ -1,2 +1,2 @@
 # Note
-Just a Note with MVVM architecture, Dagger 2
+Just a Note written in Kotlin with MVVM architecture, Dagger 2
