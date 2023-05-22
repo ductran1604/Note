@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="note"
+            type="com.example.notedagger.model.Note" />
+
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/note_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/note_item_draw"
+        android:elevation="19dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/to_do_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="25dp"
+            android:gravity="top"
+            android:text="@{note.title}"
+            android:textAppearance="@style/to_do_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:text="@{note.timeDate}"
+            android:textAppearance="@style/time_date"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/content_to_do"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="top"
+            android:lineSpacingExtra="8sp"
+            android:text="@{note.content}"
+            android:textAppearance="@style/content_to_do"
+            android:textSize="20sp"
+            android:translationY="-3.85sp" />
+
+
+    </LinearLayout>
+
+
+</layout>

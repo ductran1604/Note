@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="note"
+            type="com.example.notedagger.model.Note" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AddingNoteActivity"
+        android:orientation="vertical"
+        android:transitionName="@string/transition_name">
+
+        <TextView
+            android:id="@+id/txtTimeEdited"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:text="@{@string/edited_time(note.timeEdited, note.timeDate)}"
+            />
+
+        <EditText
+            android:id="@+id/edtNoteUpdateTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Title"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="@{note.title}"/>
+
+        <EditText
+            android:id="@+id/edtNoteUpdateContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Note something"
+            android:inputType="textMultiLine"
+            android:padding="15dp"
+            android:text="@{note.content}"/>
+    </LinearLayout>
+
+
+</layout>
+

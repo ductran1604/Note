@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Note Dagger</string>
+    <string name="edited_time"> Edited at %s, %s</string>
+    <string name="transition_name">Transition</string>
+</resources>
